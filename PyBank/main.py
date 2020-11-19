@@ -59,12 +59,12 @@ print("Financial Analysis")
 print("________________________")
 print("Total Months: ", str(total_months))
 print("Total Profit: $", str(total_Profits_Losses))
-print("Changes in Profit Loss: $", str(change_in_revenue))
-print("Average Change: $", sum(change_in_revenue)/len(change_in_revenue))
-print("Greatest Increase in Profits: ", greatest_index_date,"$",str(greatest_increase_value))
-print("Greatest Decrease in Profits: ", lowest_index_date, "$",str(lowest_index_value))
+#print("Changes in Profit Loss: $", str(change_in_revenue)) #This is a test
+print("Average Change: $", str(sum(change_in_revenue)/len(change_in_revenue))
+print("Greatest Increase in Profits: $", str(min(change_in_revenue)))
+print("Greatest Decrease in Profits: $", str(max(change_in_revenue)))
 
-# Text File 
+# Text File ``
 output =open('output.txt', 'w') 
 # Lines in the Text File
 text1= "Financial Analysis"
