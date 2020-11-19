@@ -58,21 +58,20 @@ with open(csvpath, newline="") as csvfile:
 print("Financial Analysis")
 print("________________________")
 print("Total Months: ", str(total_months))
-print("Total Profit: ", str(total_Profits_Losses))
-print("Changes in Profit Loss: ", str(change_in_revenue))
-print("Average Change:", sum(change_in_revenue)/len(change_in_revenue))
-print("Greatest Increase in Profits:", greatest_index_date, str(greatest_increase_value))
-print("Greatest Decrease in Profits:", lowest_index_date, str(lowest_index_value))
+print("Total Profit: $", str(total_Profits_Losses))
+print("Changes in Profit Loss: $", str(change_in_revenue))
+print("Average Change: $", sum(change_in_revenue)/len(change_in_revenue))
+print("Greatest Increase in Profits: ", greatest_index_date,"$",str(greatest_increase_value))
+print("Greatest Decrease in Profits: ", lowest_index_date, "$",str(lowest_index_value))
 
 # Text File 
-output = open('output.txt', 'w') as text:
-
+output =open('output.txt', 'w') 
 # Lines in the Text File
-text_1 = "Financial Analysis"
-text_2 = "----------------------"
-text_3 = ("Total Months:" + str(total_months))
-text_4 = ("Total Profits Losses:" + str(total_Profits_Losses))
-text_5 = ("Average Change:" + str(average_change))
-text_6 = ("Greatest Increase in Profits:" + greatest_index_date + str(greatest_increase_value))
-text_7 = ("Greatest Decrease in Profits:" + lowest_index_date +str(greatest_decrease_value))
-output.write
+text1= "Financial Analysis"
+text2= "----------------------"
+text3= "Total Months: " + str(total_months)
+text4= "Total Profits Losses: $" + str(total_Profits_Losses)
+text5= "Average Change: $" + str(sum(change_in_revenue)/len(change_in_revenue))
+text6= "Greatest Increase in Profits: " + greatest_index_date +"  " + "$" + str(greatest_increase_value)
+text7= "Greatest Decrease in Profits: " +  lowest_index_date+ "  " + "$" + str(greatest_decrease_value)
+output.write("{}\n{}\n{}\n{}\n{}\n{}\n{}\n" .format(text1,text2,text3,text4,text5,text6,text7))
